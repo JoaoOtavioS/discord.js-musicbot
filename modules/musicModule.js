@@ -26,7 +26,7 @@ const lang = {
     "none": "Nenhuma"
 }
 
-module.exports = (discord, client, config, fs) => {
+module.exports = (client, discord, config, credenciais) => {
 
     var pause = false, loop = false, messageid = null, listening = lang.listening;
 
