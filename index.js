@@ -6,8 +6,7 @@ const client = new discord.Client({ messageCacheMaxSize: 200, messageCacheLifeti
 // Limitations:
 // Support only guild. (to prevent errors)
 client.on('ready', () => {
-    if (client.guilds.cache.size > 1) return [console.log(color.Red(lang.error_oneguild)), client.destroy()]
-    console.log(color.Green("\n" + lang.starting_completely) + "\n" + color.Red(" [" + error + "]\n"))
+    console.log("Bot ON")
 })
 
 require('./moduleloader.js')(client, discord, config, credenciais, fs)
