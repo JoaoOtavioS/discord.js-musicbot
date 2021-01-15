@@ -6,7 +6,7 @@ module.exports = (client, discord, config, credenciais, fs) => {
         if (jsfiles.length <= 0) return
         jsfiles.forEach((f) => {
             let moduleinfo = require(`./modules/${f}`)
-            if (moduleinfo.info.moduleactive == true) {
+            if (moduleinfo.info.active == true) {
                 require('./modules/' + f.replace('.js', ''))(client, discord, config, credenciais, fs)
             }
         })
