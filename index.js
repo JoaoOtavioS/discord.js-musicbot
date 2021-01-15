@@ -10,6 +10,6 @@ client.on('ready', () => {
     console.log(color.Green("\n" + lang.starting_completely) + "\n" + color.Red(" [" + error + "]\n"))
 })
 
-require('./moduleloader.js')(client, discord, config, credenciais)
+require('./moduleloader.js')(client, discord, config, credenciais, fs)
 client.commands = new discord.Collection(), client.aliases = new discord.Collection()
 client.login(credenciais.token)
