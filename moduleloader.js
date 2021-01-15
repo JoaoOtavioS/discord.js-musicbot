@@ -1,6 +1,5 @@
-module.exports = (client, discord, config, credenciais, lang, color, fs) => {
+module.exports = (client, discord, config, credenciais) => {
 
-    console.log(color.Green(lang.starting_bot + " " + config.language + "\n")), console.log(color.Green(lang.starting_modules));
     fs.readdir("./modules/", (err, files) => {
         if (err) console.error(err)
         let jsfiles = files.filter(f => f.split(".").pop() === "js");
@@ -8,9 +7,8 @@ module.exports = (client, discord, config, credenciais, lang, color, fs) => {
         jsfiles.forEach((f) => {
             let moduleinfo = require(`./modules/${f}`)
             if (moduleinfo.info.moduleactive == true) {
-                require('./modules/' + f.replace('.js', ''))(client, discord, config, credenciais, lang, color)
-                console.log(lang.module_starting.replace("<module>", moduleinfo.info.modulename))
-            } else console.log(lang.module_nostarting.replace("<module>", moduleinfo.info.modulename))
+                require('./modules/' + f.replace('.js', ''))(client, discord, config, credenciais)
+            }
         })
     })
 
