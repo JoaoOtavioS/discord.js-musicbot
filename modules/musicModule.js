@@ -26,7 +26,7 @@ const lang = {
     "none": "Nenhuma"
 }
 
-module.exports = (client, discord, config, credenciais) => {
+module.exports = (client, discord, config, credenciais, fs) => {
 
     var pause = false, loop = false, messageid = null, listening = lang.listening;
 
@@ -214,7 +214,6 @@ module.exports = (client, discord, config, credenciais) => {
 module.exports.info = {
     name: "musicSystem",
     description: "O modulo de musica.",
-    log: true,
     active: true,
     version: "0.0.2"
 }
