@@ -1,4 +1,4 @@
-module.exports = (client, discord, config, credenciais) => {
+module.exports = (client, discord, config, credenciais, fs) => {
 
     fs.readdir("./modules/", (err, files) => {
         if (err) console.error(err)
@@ -7,7 +7,7 @@ module.exports = (client, discord, config, credenciais) => {
         jsfiles.forEach((f) => {
             let moduleinfo = require(`./modules/${f}`)
             if (moduleinfo.info.moduleactive == true) {
-                require('./modules/' + f.replace('.js', ''))(client, discord, config, credenciais)
+                require('./modules/' + f.replace('.js', ''))(client, discord, config, credenciais, fs)
             }
         })
     })
