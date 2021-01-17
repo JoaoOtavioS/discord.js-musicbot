@@ -4,7 +4,7 @@ Um bot de música 100% intuitivo e fácil de usar, totalmente em embed.
 ## Funções
 Detectar uma música do Youtube atráves de link ou simplesmente por pesquisa.
 Um bot 100% embed (com reações) (4 opções) 
-(⏹️ = Para a música || ⏯️ = Pula a música || ⏭️ = Pula 1 música da fila || 🔄 = Coloca a música atual em loop)
+(⏹️ = Para a música || ⏯️ = Pausa a música || ⏭️ = Pula 1 música da fila || 🔄 = Coloca a música atual em loop)
 
 ### Como usar?
 Antes de tudo baixe o bot do github e vá em modules/musicmodule e configure-o a seu gosto.
